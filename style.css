@@ -1,6 +1,13 @@
+@font-face {
+    font-family: def;
+    src: url(./assets/fonts/64d3dd9edfb41666c35b15bf_NeueHaasDisplay-Mediu.ttf);
+}
+
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: def;
 }
 
 html, body{
@@ -13,4 +20,57 @@ html, body{
     width: 100%;
     background-color: #EFEAE3;
     position: relative;
+}
+
+nav{
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    border-radius: 50px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.637);
+    position: relative;
+    font-size: 18px;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+.nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 100%;
+    transition: all ease 0.4s;
+}
+
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+.nav-part2 h4 a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.637);
+    z-index: 9;
+    position: relative;
+}
+
+.nav-part2 h4:hover a{
+    color: white;
 }
