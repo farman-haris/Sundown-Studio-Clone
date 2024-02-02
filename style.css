@@ -2,6 +2,11 @@
     font-family: def;
     src: url(./assets/fonts/64d3dd9edfb41666c35b15bf_NeueHaasDisplay-Mediu.ttf);
 }
+@font-face {
+    font-family: def;
+    font-weight: 200;
+    src: url(./assets/fonts/64d3dd9edfb41666c35b15c0_NeueHaasDisplay-Roman.ttf);
+}
 
 *{
     margin: 0px;
@@ -33,6 +38,14 @@ html, body{
     }
 }
 
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
 
 /*============ Page1 Styling ============*/
 
@@ -178,4 +191,79 @@ nav{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+/*============ Page2 Styling ============*/
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+}
+
+/*============ Moving Styling ============*/
+
+.moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+
+.circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+/*============ Page2 Bottom Styling ============*/
+
+.page2-bottom{
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page2-bottom h1{
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+}
+
+.bottom-part2{
+    width: 20%;
+}
+
+.bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.bottom-part2 p{
+    font-weight: 200;
+    margin-top: 1vw;
 }
