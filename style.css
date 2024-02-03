@@ -1,3 +1,5 @@
+/*============ Project Setup ============*/
+
 @font-face {
     font-family: def;
     src: url(./assets/fonts/64d3dd9edfb41666c35b15bf_NeueHaasDisplay-Mediu.ttf);
@@ -19,6 +21,8 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+/*============ Animations Styling ============*/
 
 @keyframes anime1 {
     from{
@@ -47,6 +51,20 @@ html, body{
     }
 }
 
+@keyframes goeey {
+    from{
+        transform: translate(10%, -10%) skew(0);
+        filter: blur(20px);
+
+    }
+    to{
+        transform: translate(-10%, 10%) skew(-12deg);
+        filter: blur(30px);
+
+    }
+    
+}
+
 /*============ Page1 Styling ============*/
 
 .page1{
@@ -70,6 +88,7 @@ nav{
     display: flex;
     align-items: center;
     gap: 1vw;
+    cursor: pointer;
 }
 
 .nav-part2 h4{
@@ -200,6 +219,7 @@ nav{
     width: 100%;
     background-color: #EFEAE3;
     padding: 8vw 0;
+    position: relative;
 }
 
 /*============ Moving Styling ============*/
@@ -246,6 +266,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 9;
 }
 
 .page2-bottom h1{
@@ -265,5 +287,30 @@ nav{
 
 .bottom-part2 p{
     font-weight: 200;
-    margin-top: 1vw;
+    margin-top: 2vw;
+    font-size: 1vw;
+}
+
+.page2 .goeey{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #FE320A,#fe570a);
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: goeey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/*============ Page3 Styling ============*/
+
+.page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
 }
