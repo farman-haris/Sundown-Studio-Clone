@@ -330,7 +330,6 @@ nav{
 .elem h2{
     font-size: 3vw;
     position: relative;
-    z-index: 9;
 }
 
 .elem .overlay{
@@ -363,4 +362,59 @@ nav{
     display: none;
     background-size: cover;
     background-position: center;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2vw;
+}
+
+.heading img{
+    height: 10px;
+    width: 10px;
+    margin-right: 1vw;
+}
+
+.heading h5{
+    font-size: 1vw;
+    font-weight: 200;
+}
+
+.card-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    z-index: 9;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.card-text h4{
+    height: 1vw;
+    font-weight: 200;
+}
+
+.card-text h5{
+    height: 1vw;
+    font-weight: 200;
+    color: #7E7E7E;
+}
+
+.button{
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+.button h4{
+    font-weight: 200;
+    font-size: 1.5vw;
 }
